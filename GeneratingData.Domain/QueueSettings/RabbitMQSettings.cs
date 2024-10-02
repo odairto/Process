@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeneratingData.Domain.QueueSettings
+namespace Process.Domain.QueueSettings
 {
     public class RabbitMQSettings
     {

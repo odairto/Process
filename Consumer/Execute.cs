@@ -1,6 +1,6 @@
-﻿using GeneratingData.Domain.Services;
+﻿using Process.Domain.Services;
 
-namespace GeneratingData.Domain
+namespace Process
 {
     public class Execute
     {
@@ -13,7 +13,7 @@ namespace GeneratingData.Domain
 
         public void ExecuteProcess()
         {
-            _clientService.GenerateClient();
+            _clientService.ProcessClientFromQueue();
         }
     }
 

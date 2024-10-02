@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeneratingData.Domain.Entities
+namespace Process.Domain.Entities
 {
     public class Client
     {
-        public string Id { get; set; }
-        public string Name { get; set; }
-        public string Phone{ get; set; }
+        public string ?Id { get; set; }
+        public string ?Name { get; set; }
+        public string ?Phone{ get; set; }
     }
 }

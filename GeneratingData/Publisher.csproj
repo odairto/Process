@@ -12,6 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeneratingData.Domain\GeneratingData.Domain.csproj" />
+    <ProjectReference Include="..\GeneratingData.Domain\Process.Domain.csproj" />
   </ItemGroup>
 </Project>

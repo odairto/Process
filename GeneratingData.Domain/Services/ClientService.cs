@@ -6,11 +6,11 @@ using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Faker;
-using GeneratingData.Domain.Entities;
-using GeneratingData.Domain.QueueSettings;
+using Process.Domain.Entities;
+using Process.Domain.QueueSettings;
 using RabbitMQ.Client;
 
-namespace GeneratingData.Domain.Services
+namespace Process.Domain.Services
 {
     public class ClientService
     {
@@ -31,6 +31,12 @@ namespace GeneratingData.Domain.Services
             };
 
             _rabbitMQService.SendMessage(JsonSerializer.Serialize(client));
+        }     
+        
+
+        public void ProcessClientFromQueue()
+        {
+            _rabbitMQService.ProcessClientFromQueue();            
         }
     }
 }
