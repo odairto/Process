@@ -32,14 +32,8 @@ In Docker, we need two containers: RabbitMQ and the Worker Service. To enable co
     ```
     This command enables 2 ports in the external environment of Docker. You can access the RabbitMQ Admin interface at `localhost:15672` with user: `guest` and password: `guest`. The port 5672 is used to run the project locally.
 
-4. Create the image and run the Publisher:
-    In PowerShell, navigate to the project path, something like: `Repositories\Process`, and execute:
-    ```sh
-    docker build -t generating-data:1.0.0 .
-    docker run -d --network my_network --name process generating-data:1.0.0
-    ```
 
-5. Create the image and run the Publisher:
+4. Create the image and run the Publisher:
     In PowerShell, navigate to the project path, something like: `\Process`, and execute:
     ```sh
     docker build -f Dockerfile.publisher -t publisher:1.0.0 .
@@ -47,7 +41,7 @@ In Docker, we need two containers: RabbitMQ and the Worker Service. To enable co
     ```
     At this point, you can see in the container's log (in Docker Desktop) some data being generated. In the RabbitMQ Admin interface, the Queues tab will show the number of messages increasing. Now let's publish the "Consumer" project.
 
-6. Create the image and run the Consumer:
+5. Create the image and run the Consumer:
     ```sh
     docker build -f Dockerfile.consumer -t consumer:1.0.0 .
     docker run -d --network my_network --name consumer consumer:1.0.0
