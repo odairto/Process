@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "GeneratingData\Publisher.csproj", "{CC7CE5E4-B743-446D-A24B-C23B3BB77492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Publisher", "Publisher\Publisher.csproj", "{CC7CE5E4-B743-446D-A24B-C23B3BB77492}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Process.Domain", "GeneratingData.Domain\Process.Domain.csproj", "{3A621B12-7A5F-489E-815B-D1AC0D2B115F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Process.Domain", "Process.Domain\Process.Domain.csproj", "{3A621B12-7A5F-489E-815B-D1AC0D2B115F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumer", "Consumer\Consumer.csproj", "{FE381972-D082-4B79-9122-637DAE0C32E6}"
 EndProject

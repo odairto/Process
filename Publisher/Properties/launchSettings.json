@@ -1,16 +1,16 @@
 {
   "profiles": {
-    "GeneratingData": {
-      "commandName": "Project",
-      "environmentVariables": {
-        "DOTNET_ENVIRONMENT": "Development"
-      },
-      "dotnetRunMessages": true
-    },
     "Docker": {
       "commandName": "Project",
       "environmentVariables": {
         "DOTNET_ENVIRONMENT": "Docker"
+      },
+      "dotnetRunMessages": true
+    },
+    "Publisher": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
       },
       "dotnetRunMessages": true
     }

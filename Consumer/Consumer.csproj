@@ -13,6 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeneratingData.Domain\Process.Domain.csproj" />
+    <ProjectReference Include="..\Process.Domain\Process.Domain.csproj" />
   </ItemGroup>
 </Project>

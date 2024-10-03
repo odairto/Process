@@ -4,7 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>dotnet-GeneratingData-0ad38c24-9b42-4dd1-b77e-cc1212db73c7</UserSecretsId>
+    <UserSecretsId>dotnet-Process-0ad38c24-9b42-4dd1-b77e-cc1212db73c7</UserSecretsId>
+	<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeneratingData.Domain\Process.Domain.csproj" />
+    <ProjectReference Include="..\Process.Domain\Process.Domain.csproj" />
   </ItemGroup>
 </Project>

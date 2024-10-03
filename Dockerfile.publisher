@@ -1,0 +1,25 @@
+# Use a imagem base do .NET SDK para compilar o projeto
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /app
+
+# Copie os arquivos de projeto para seus respectivos diretórios e restaure as dependências
+COPY Publisher/Publisher.csproj ./Publisher/
+COPY Process.Domain/Process.Domain.csproj ./Process.Domain/
+WORKDIR /app/Publisher
+RUN dotnet restore
+
+# Copie o restante dos arquivos e compile o projeto
+COPY Publisher/. ./Publisher/
+COPY Process.Domain/. ./Process.Domain/
+RUN dotnet publish -c Release -o /app/publish
+
+# Use a imagem base do .NET Runtime para rodar o aplicativo
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+
+# Configuração do ambiente
+ENV DOTNET_ENVIRONMENT=Docker
+
+WORKDIR /app
+COPY --from=build /app/publish .
+
+ENTRYPOINT ["dotnet", "Publisher.dll"]
