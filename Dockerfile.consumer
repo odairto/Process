@@ -2,15 +2,15 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Copia os arquivos do projeto Publisher e da biblioteca Process.Domain
-COPY Publisher/ ./Publisher/
+# Copia os arquivos do projeto Consumer e da biblioteca Process.Domain
+COPY Consumer/ ./Consumer/
 COPY Process.Domain/ ./Process.Domain/
-WORKDIR /app/Publisher
+WORKDIR /app/Consumer
 
 # Restaura as dependências
 RUN dotnet restore
 
-# Publica o projeto Publisher
+# Publica o projeto Consumer
 RUN dotnet publish -c Release -o /app/publish
 
 # Etapa de runtime
@@ -21,4 +21,4 @@ ENV DOTNET_ENVIRONMENT=Docker
 WORKDIR /app
 COPY --from=build /app/publish .
 
-ENTRYPOINT ["dotnet", "Publisher.dll"]
+ENTRYPOINT ["dotnet", "Consumer.dll"]
